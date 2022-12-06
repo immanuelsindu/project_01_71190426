@@ -111,18 +111,21 @@
         this.isMakanan = true
         this.isMinuman = false
         this.isSnack = false
+        this.isDetailMenu = false
       },
       showMinuman(){
         this.isItemMenu = false
         this.isMakanan = false
         this.isMinuman = true
         this.isSnack = false
+        this.isDetailMenu = false
       },
       showSnack(){
         this.isItemMenu = false
         this.isMakanan = false
         this.isMinuman = false
         this.isSnack = true
+        this.isDetailMenu = false
       },
       detailMenu(){
         this.isDetailMenu = true
