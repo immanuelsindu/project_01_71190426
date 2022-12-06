@@ -9,11 +9,11 @@
   </div>
 
   <div id="itemMenu">
-    <!-- <h2 v-show="isItemMenu">
+    <h2 v-show="isItemMenu">
       Selamat Datang di Aplikasi MacDonal, Silahkan Pesan Makanan Anda
-    </h2> -->
+    </h2>
 
-<!--     
+    
     <div v-show="isMakanan" id="makanan" >
       <div @click="detailMenu()" id="itemMakanan">
         <img src="../assets/makanan1.jpg" alt="makanan1">
@@ -65,9 +65,9 @@
         <img src="../assets/makanan1.jpg" alt="makanan1">
         <p>Pisang Coklat</p>
       </div>
-    </div> -->
+    </div>
 
-    <div id="detailMenu">
+    <div v-show="isDetailMenu" id="detailMenu">
       <div id="menuKiriMakan">
         <h3>Pedas/Tidak</h3>
         <p @click="(isBoldTipe = true, isBoldTipe2= false)" v-bind:class="{boldTipe: isBoldTipe}">Pedas</p>
@@ -80,7 +80,9 @@
       
 
       <div id="menuKananMakan">
-
+          <img src="../assets/makanan1.jpg" alt="fotoItemMakanan">
+          <p>GigaMac</p>
+          <p>Rp 70.000</p>
       </div>
     </div>
   </div>
@@ -99,7 +101,7 @@
         isBoldTipe2: false,
         isBoldTipe3: false,
         isBoldTipe4: false,
-        
+        isDetailMenu: false
        
       }
     },
@@ -123,7 +125,8 @@
         this.isSnack = true
       },
       detailMenu(){
-        
+        this.isDetailMenu = true
+        this.isMakanan = false
       }
 
     }
@@ -192,14 +195,13 @@
     #menuKiriMakan{
       width: 50%;
       height: 550px;
-
       float: left;
     }
 
     #menuKananMakan{
       width: 50%;
       height: 550px;
-      
+      text-align: center;
       float: left;
     }
 
