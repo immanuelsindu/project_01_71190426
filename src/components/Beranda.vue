@@ -6,6 +6,13 @@
       <li @click="showMinuman()"><a href="#">Minuman</a></li>
       <li @click="showSnack()"><a href="#">Snack</a></li>
     </ol>
+
+    <div id="checkoutBtn">
+      <button>
+        Checkout
+      </button>
+    </div>
+    
   </div>
 
   <div id="itemMenu">
@@ -237,5 +244,14 @@
     .boldTipe{
       font-weight: bold;
         color: black !important
+    }
+
+    #checkoutBtn button{
+      text-align: center;
+      background-color: #EAED5B;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold ;
+      border:0px;
     }
 </style>
